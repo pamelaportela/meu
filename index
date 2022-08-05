@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RAITec</title>
+	<link rel="shortcut icon" href="img/dark_logo.png" type="image/x-icon">
+
+	<!-- Google Fonts - Cairo Regular -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- CSS Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+
+	<!-- CSS do projeto -->
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!-- JavaScript Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-primary-color">
+	
+			<!--barra de navegacao -->
+
+			<nav class="barra_de_navegacao_superior">
+				<div class="caixa_da_barra_de_navegacao">
+					<!--logo raitec-->
+					<div class="caixa_de_logo_raitec">
+						<a href="#" class="ancora_logo_raitec">
+							<!--CASO QUEIRAM COLOCAR ANCORA-->
+							<img src="img/ciano_nome_lado.png" class="imagem_logo_raitec" />
+						</a>
+					</div>
+					<!--icone de perfil-->
+					<div class="caixa_de_perfil_membro">
+						<a href="#" class="ancora__perfil_membro">
+
+							<body>
+								<div class="header">
+
+									<h1>Eduardo Vilas boas</h1>
+									<p>
+										Membro do RAITec
+									</p>
+
+									<img class="sua foto" src="img/dudu_perfil.jpg" alt="sua foto">
+								</div>
+
+								<div class="about">
+									<h1>Sobre mim</h1>
+									<p>Eu não sou calvo</p>
+								</div>
+
+
+								<div class="detalhes">
+									<h1> Detalhes</h1>
+
+									<span class="negrito">setor: </span>
+									<p>inovação</p>
+									<span class="negrito">Curso:</span>
+									<p>Engenharia elétrica</p>
+									<span class="negrito">Email:</span>
+									<p>duduzinhogamer@hotmail.com</p>
+									<span class="negrito">Contato:</span>
+									<p>(85)90000-0000</p>
+									<span class="negrito">Projetos gerais:</span>
+									<p>DETec</p>
+									<span class="negrito">Projetos inovação:</span>
+									<p>CHATBot</p>
+								</div>
+								<img src="img/dudu_perfil.jpg" class="imagem de perfil" />
+						</a>
+					</div>
+				</div>
+
+</body>
+
+</html>
