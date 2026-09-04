@@ -1,0 +1,61 @@
+import math
+
+# Dados da linha
+V = 230e3          # V
+Sbase = 100e6      # VA
+f = 60             # Hz
+comprimento = 110e3 # m (110000 m = 110 km dado do SINMAPS)
+
+R_percent = 1.20
+X_percent = 7.22
+Qsh = 29e6         # var
+
+I_nom = 1665       # A
+fp = 0.95
+
+# Impedância base
+Zbase = V**2 / Sbase
+
+# Resistência
+R_pu = R_percent / 100
+R_total = R_pu * Zbase
+R_m = R_total / comprimento
+
+# Reatância
+X_pu = X_percent / 100
+X_total = X_pu * Zbase
+
+# Indutância
+L_total = X_total / (2 * math.pi * f)
+L_m = L_total / comprimento
+L_mH_m = L_m * 1000
+
+# Capacitância
+C_total = Qsh / (V**2 * 2 * math.pi * f)
+C_uF = C_total * 1e6
+C_m = C_uF / comprimento
+
+# Carga
+S_carga = math.sqrt(3) * V * I_nom
+P_carga = S_carga * fp
+Q_carga = S_carga * math.sqrt(1 - fp**2)
+
+# Carga RL série
+Vfase = V / math.sqrt(3)
+Zcarga = Vfase / I_nom
+
+R_carga = P_carga / (3 * I_nom**2)
+X_carga = math.sqrt(Zcarga**2 - R_carga**2)
+L_carga = X_carga / (2 * math.pi * f)
+
+print("Zbase =", Zbase, "ohm")
+print("R =", R_m, "ohm/m")
+print("L =", L_mH_m, "mH/m")
+print("C =", C_m, "uF/m")
+
+print("S carga =", S_carga/1e6, "MVA")
+print("P carga =", P_carga/1e6, "MW")
+print("Q carga =", Q_carga/1e6, "MVAr")
+
+print("R carga =", R_carga, "ohm")
+print("L carga =", L_carga*1000, "mH")
